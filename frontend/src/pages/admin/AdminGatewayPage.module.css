@@ -1,0 +1,444 @@
+/* =========================================================
+   EGSA Academy — Dual-Division Admin Gateway (Clean Enterprise)
+   ========================================================= */
+
+.gatewayContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-canvas, #F9F8F5);
+  color: var(--text-ink-primary, #151D24);
+  padding: 3rem 1.5rem;
+  position: relative;
+}
+
+.contentWrapper {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.gatewayHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.agencyEmblemWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.agencyLogo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  background: var(--bg-surface, #FFFFFF);
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid var(--border-structural, #E2DFD7);
+  box-shadow: var(--shadow-elevation-1);
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-surface, #FFFFFF);
+  border: 1px solid var(--accent-gold, #C4A668);
+  border-radius: var(--radius-badge, 4px);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #8C6D23;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold, #C4A668);
+}
+
+.mainTitle {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-ink-primary, #151D24);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #536471);
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Active Session Banner */
+.activeSessionBanner {
+  background: var(--bg-surface, #FFFFFF);
+  border: 1px solid var(--border-structural, #E2DFD7);
+  border-radius: var(--radius-container, 6px);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: var(--shadow-elevation-1);
+  flex-wrap: wrap;
+}
+
+.sessionLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.sessionIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-badge, 4px);
+  background: var(--bg-surface-muted, #F3F1EC);
+  color: var(--primary-cosmos, #24476B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.sessionText {
+  display: flex;
+  flex-direction: column;
+}
+
+.sessionTitle {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-ink-primary, #151D24);
+}
+
+.sessionSubtitle {
+  font-size: 0.72rem;
+  color: var(--text-secondary, #536471);
+}
+
+.sessionActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Split Card Grid */
+.splitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 860px) {
+  .splitGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Minimalist Structural Cards */
+.divisionCard {
+  background: var(--bg-surface, #FFFFFF);
+  border-radius: var(--radius-container, 6px);
+  border: 1px solid var(--border-structural, #E2DFD7);
+  box-shadow: var(--shadow-elevation-1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.divisionCard:hover {
+  border-color: var(--primary-cosmos, #24476B);
+  box-shadow: var(--shadow-elevation-2);
+}
+
+.cardHeader {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border-muted, #EFEEEB);
+}
+
+.cardHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.iconEmblem {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-badge, 4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  background: var(--bg-surface-muted, #F3F1EC);
+  border: 1px solid var(--border-structural, #E2DFD7);
+}
+
+.cardUniversity {
+  border-top: 3px solid var(--secondary-teal, #1E7C85);
+}
+
+.cardUniversity:hover {
+  border-color: var(--secondary-teal, #1E7C85);
+  box-shadow: 0 4px 12px rgba(30, 124, 133, 0.12);
+}
+
+.cardPreUniversity {
+  border-top: 3px solid var(--primary-cosmos, #24476B);
+}
+
+.cardPreUniversity:hover {
+  border-color: var(--primary-cosmos, #24476B);
+  box-shadow: 0 4px 12px rgba(36, 71, 107, 0.12);
+}
+
+.cardUniversity .iconEmblem {
+  color: var(--secondary-teal, #1E7C85);
+  border-color: rgba(30, 124, 133, 0.25);
+}
+
+.cardPreUniversity .iconEmblem {
+  color: var(--primary-cosmos, #24476B);
+  border-color: rgba(36, 71, 107, 0.25);
+}
+
+/* Badges */
+.divisionBadge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-badge, 4px);
+}
+
+.badgeTeal {
+  background: rgba(30, 124, 133, 0.08);
+  color: var(--secondary-teal, #1E7C85);
+  border: 1px solid rgba(30, 124, 133, 0.3);
+}
+
+.badgeCosmos {
+  background: rgba(36, 71, 107, 0.08);
+  color: var(--primary-cosmos, #24476B);
+  border: 1px solid rgba(36, 71, 107, 0.3);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-ink-primary, #151D24);
+  line-height: 1.2;
+  margin: 0 0 0.2rem;
+}
+
+.cardArabicTitle {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text-secondary, #536471);
+}
+
+/* Card Body */
+.cardBody {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Focus Section */
+.focusSection {
+  margin-bottom: 1.25rem;
+}
+
+.focusSectionHeader {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary, #536471);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.focusGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.45rem;
+}
+
+@media (max-width: 576px) {
+  .focusGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.focusPill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--bg-surface-muted, #F3F1EC);
+  border: 1px solid var(--border-structural, #E2DFD7);
+  border-radius: var(--radius-badge, 4px);
+  padding: 0.45rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-ink-primary, #151D24);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardUniversity .focusPill i {
+  color: var(--secondary-teal, #1E7C85);
+  font-size: 0.8rem;
+}
+
+.cardPreUniversity .focusPill i {
+  color: var(--primary-cosmos, #24476B);
+  font-size: 0.8rem;
+}
+
+/* Operational Metrics Row */
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  background: var(--bg-surface-muted, #F3F1EC);
+  border: 1px solid var(--border-structural, #E2DFD7);
+  border-radius: var(--radius-container, 6px);
+  padding: 0.65rem 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.metricBox {
+  text-align: center;
+  position: relative;
+}
+
+.metricValue {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-ink-primary, #151D24);
+  line-height: 1.15;
+}
+
+.metricBox:nth-child(1) .metricValue,
+.metricBox:nth-child(3) .metricValue {
+  color: #8C6D23;
+}
+
+.metricLabel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--text-secondary, #536471);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0.15rem;
+}
+
+/* Card CTA Action */
+.cardFooter {
+  margin-top: auto;
+}
+
+.primaryCtaBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-container, 6px);
+  cursor: pointer;
+  background-color: var(--primary-cosmos, #24476B);
+  transition: background-color 140ms ease;
+  box-shadow: var(--shadow-elevation-1);
+}
+
+.primaryCtaBtn:hover {
+  background-color: var(--primary-cosmos-hover, #1C3753);
+}
+
+.cardUniversity .primaryCtaBtn,
+.ctaUniversity {
+  background-color: var(--secondary-teal, #1E7C85) !important;
+}
+
+.cardUniversity .primaryCtaBtn:hover,
+.ctaUniversity:hover {
+  background-color: #17636A !important;
+}
+
+.cardPreUniversity .primaryCtaBtn,
+.ctaPreUniversity {
+  background-color: var(--primary-cosmos, #24476B) !important;
+}
+
+.cardPreUniversity .primaryCtaBtn:hover,
+.ctaPreUniversity:hover {
+  background-color: var(--primary-cosmos-hover, #1C3753) !important;
+}
+
+/* Footer Section */
+.gatewayFooter {
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-structural, #E2DFD7);
+}
+
+.superAdminLinkBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary, #536471);
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-badge, 4px);
+  transition: color 140ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.superAdminLinkBtn:hover {
+  color: var(--text-ink-primary, #151D24);
+  text-decoration: underline;
+}
+
+.footerCopyright {
+  margin-top: 0.75rem;
+  font-size: 0.74rem;
+  color: var(--text-secondary, #536471);
+}

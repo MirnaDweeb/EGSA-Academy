@@ -1,0 +1,371 @@
+/* =========================================================
+   EGSA Academy — Unified Brand Color Palette & Design Tokens
+   Egyptian Space Agency · Official Color System
+   ========================================================= */
+
+:root {
+  /* Sovereign Orbital & Institutional Brand Color Palette */
+  --egsa-primary: #24476B;          /* Primary Brand: Sovereign Cosmos Blue */
+  --egsa-primary-hover: #1C3753;
+  --egsa-primary-rgb: 36, 71, 107;
+
+  --egsa-secondary: #1E7C85;        /* Secondary Brand Accent: Technical Teal */
+  --egsa-secondary-hover: #17636A;
+  --egsa-secondary-rgb: 30, 124, 133;
+
+  --egsa-accent-gold: #C4A668;      /* Gold-Tan Institutional Accent */
+  --egsa-accent-gold-dark: #8C6D23;
+  --egsa-accent-coral: #BA3836;     /* Semantic Destructive / Critical */
+
+  --egsa-accent: #1E7C85;
+  --egsa-accent-strong: #17636A;
+  --egsa-accent-soft: rgba(30, 124, 133, 0.12);
+  --egsa-accent-rgb: 30, 124, 133;
+
+  --egsa-danger: #BA3836;           /* Destructive / Risk */
+  --egsa-danger-hover: #9E2B29;
+  --egsa-danger-rgb: 186, 56, 54;
+
+  --egsa-dark: #151D24;             /* Pure Ink Primary */
+  --egsa-dark-rgb: 21, 29, 36;
+
+  --egsa-navy: #24476B;             /* Primary Cosmos */
+  --egsa-navy-dark: #132233;        /* Chrome Dark */
+  --egsa-navy-light: #375F8A;
+
+  /* Surfaces & Clean Backgrounds */
+  --egsa-light: #F9F8F5;            /* Warm Papyrus Stone Canvas */
+  --egsa-light-alt: #F3F1EC;        /* Surface Muted */
+  --egsa-surface: #FFFFFF;          /* Flat White Panel Surface */
+  --egsa-border: #E2DFD7;           /* Structural Hairline */
+  --egsa-border-soft: #EFEEEB;      /* Border Muted */
+  --egsa-border-strong: #D1CDC2;    /* High Contrast Border */
+  --egsa-muted: #748390;            /* Muted Technical Text */
+  --egsa-text: #151D24;             /* Text Ink Primary */
+  --egsa-text-secondary: #536471;   /* Text Secondary */
+  --egsa-logo-plate: #FFFFFF;
+
+  /* Legacy ESA Portal Aliases (Harmonized to Sovereign tokens) */
+  --esa-primary: var(--egsa-primary);
+  --esa-primary-hover: var(--egsa-primary-hover);
+  --esa-primary-subtle: #F3F1EC;
+  --esa-secondary: var(--egsa-secondary);
+  --esa-action: var(--egsa-secondary);
+  --esa-accent: var(--egsa-accent);
+  --esa-danger: var(--egsa-danger);
+  --esa-surface: #FFFFFF;
+  --esa-surface-alt: #F9F8F5;
+  --esa-surface-elevated: #FFFFFF;
+  --esa-border: #E2DFD7;
+  --esa-border-soft: #EFEEEB;
+  --esa-border-strong: #D1CDC2;
+  --esa-text: #151D24;
+  --esa-text-primary: #151D24;
+  --esa-text-secondary: #536471;
+  --esa-text-muted: #748390;
+  --esa-radius-xs: 3px;
+  --esa-radius-sm: 4px;
+  --esa-radius-md: 6px;
+  --esa-radius-lg: 6px;
+  --esa-radius-xl: 6px;
+  --esa-radius-pill: 9999px;
+
+  /* Bootstrap 5 Theme Variables Override */
+  --bs-primary: #24476B;
+  --bs-primary-rgb: 36, 71, 107;
+  --bs-secondary: #1E7C85;
+  --bs-secondary-rgb: 30, 124, 133;
+  --bs-success: #1B8354;
+  --bs-success-rgb: 27, 131, 84;
+  --bs-warning: #B86B14;
+  --bs-warning-rgb: 184, 107, 20;
+  --bs-danger: #BA3836;
+  --bs-danger-rgb: 186, 56, 54;
+  --bs-dark: #151D24;
+  --bs-dark-rgb: 21, 29, 36;
+  --bs-light: #F9F8F5;
+  --bs-light-rgb: 249, 248, 245;
+  --bs-body-bg: #F9F8F5;
+  --bs-body-color: #151D24;
+  --bs-link-color: #24476B;
+  --bs-link-hover-color: #1C3753;
+  --bs-border-color: #E2DFD7;
+  --bs-border-radius: 6px;
+  --bs-border-radius-sm: 4px;
+  --bs-border-radius-lg: 6px;
+
+  /* Spacing Scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+
+  /* Strict Geometric Radius (Soft Structural Tier) */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 6px;
+  --radius-xl: 6px;
+  --radius-pill: 9999px;
+  --r-xs: 3px;
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 6px;
+  --r-xl: 6px;
+  --r-full: 9999px;
+
+  /* Disciplined Ambient Occlusion (No Fuzzy Shadows) */
+  --sh-1: 0 1px 2px 0 rgba(19, 34, 51, 0.04);
+  --sh-2: 0 4px 6px -1px rgba(19, 34, 51, 0.06), 0 2px 4px -2px rgba(19, 34, 51, 0.04);
+  --sh-3: 0 4px 6px -1px rgba(19, 34, 51, 0.06), 0 2px 4px -2px rgba(19, 34, 51, 0.04);
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+}
+
+/* Base resets & Clean Canvas */
+body {
+  background-color: var(--egsa-light);
+  color: var(--egsa-text);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* -------------------------------------------------------------
+   Primary Buttons: Solid Sovereign Cosmos Blue #24476B (hover: #1C3753)
+   ------------------------------------------------------------- */
+.btn-primary, .btn-cosmos {
+  background-color: #24476B !important;
+  border-color: #24476B !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  transition: all 180ms ease;
+  box-shadow: var(--shadow-elevation-1, 0 1px 2px rgba(19, 34, 51, 0.04));
+}
+.btn-primary:hover, .btn-primary:focus, .btn-cosmos:hover {
+  background-color: #1C3753 !important;
+  border-color: #1C3753 !important;
+  color: #ffffff !important;
+  box-shadow: var(--shadow-elevation-2, 0 4px 6px -1px rgba(19, 34, 51, 0.06));
+}
+
+/* -------------------------------------------------------------
+   Action / Verify Buttons: Solid Deep Teal-Green #1E7C85 (hover: #17636A)
+   ------------------------------------------------------------- */
+.btn-secondary, .btn-action, .btn-verify, .btn-egsa, .btn-teal {
+  background-color: #1E7C85 !important;
+  border-color: #1E7C85 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  transition: all 180ms ease;
+  box-shadow: var(--shadow-elevation-1, 0 1px 2px rgba(19, 34, 51, 0.04));
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-action:hover, .btn-verify:hover, .btn-egsa:hover, .btn-teal:hover {
+  background-color: #17636A !important;
+  border-color: #17636A !important;
+  color: #ffffff !important;
+  box-shadow: var(--shadow-elevation-2, 0 4px 6px -1px rgba(19, 34, 51, 0.06));
+}
+
+/* Secondary / Outline Buttons: #24476B borders with matching text */
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-cosmos {
+  color: #24476B !important;
+  border: 1px solid #24476B !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+  transition: all 180ms ease;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus,
+.btn-outline-secondary:hover, .btn-outline-secondary:focus,
+.btn-outline-cosmos:hover {
+  background-color: #24476B !important;
+  color: #ffffff !important;
+  border-color: #24476B !important;
+}
+
+/* Destructive Button: Sovereign Destructive #BA3836 */
+.btn-danger {
+  background-color: #BA3836 !important;
+  border-color: #BA3836 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  transition: all 180ms ease;
+}
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #9E2B29 !important;
+  border-color: #9E2B29 !important;
+  color: #ffffff !important;
+}
+
+/* -------------------------------------------------------------
+   Active Tabs (Deep Teal-Green #1E7C85)
+   ------------------------------------------------------------- */
+.nav-tabs .nav-link.active,
+.nav-pills .nav-link.active,
+.tab-active {
+  background-color: #1E7C85 !important;
+  border-color: #1E7C85 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* -------------------------------------------------------------
+   Pending / 72h Hold / Attention Badges:
+   Background #D4B87C20, text #8C6D23, border #D4B87C60
+   ------------------------------------------------------------- */
+.badge-gold,
+.badge-warning,
+.badge-warn,
+.badge-notice,
+.badge-accent,
+.badge-pending,
+.badge-waiting,
+.badge-attention,
+.badge.bg-warning {
+  background-color: #D4B87C20 !important;
+  color: #8C6D23 !important;
+  font-weight: 600 !important;
+  border: 1px solid #D4B87C60 !important;
+  border-radius: 6px !important;
+}
+
+.badge-gold-subtle,
+.badge-warning-subtle {
+  background-color: #D4B87C20 !important;
+  color: #8C6D23 !important;
+  border: 1px solid #D4B87C60 !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+}
+
+/* -------------------------------------------------------------
+   Verified / Present / Passing Badges:
+   Background #1E7C8515, text #1E7C85, border #1E7C8540
+   ------------------------------------------------------------- */
+.badge-ok, .badge-active, .badge-completed, .badge-present, .badge-success, .badge-verified, .badge.bg-success {
+  background-color: #1E7C8515 !important;
+  color: #1E7C85 !important;
+  border: 1px solid #1E7C8540 !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+}
+
+/* -------------------------------------------------------------
+   At-Risk / Late / Danger Badges:
+   Background #DF4F4C15, text #DF4F4C, border #DF4F4C40
+   ------------------------------------------------------------- */
+.badge-danger,
+.badge-absent,
+.badge-cancelled,
+.badge-late,
+.flag-late,
+.flag-destructive,
+.badge.bg-danger {
+  background-color: #DF4F4C15 !important;
+  color: #DF4F4C !important;
+  border: 1px solid #DF4F4C40 !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+}
+
+.badge-info, .badge-upcoming, .badge-scheduled, .badge.bg-info {
+  background-color: #3A698515 !important;
+  color: #3A6985 !important;
+  border: 1px solid #3A698540 !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+}
+
+/* -------------------------------------------------------------
+   Typography & Inputs: Pure Dark Text on White with Subtle Borders
+   ------------------------------------------------------------- */
+.form-control, .form-select {
+  background-color: #ffffff !important;
+  color: #0F172A !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: var(--radius-md) !important;
+  font-size: 0.92rem;
+  padding: 0.6rem 0.85rem;
+  box-shadow: none !important;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-control::placeholder {
+  color: #94A3B8;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #ffffff !important;
+  color: #0F172A !important;
+  border-color: #1E7C85 !important;
+  box-shadow: 0 0 0 3px rgba(30, 124, 133, 0.2) !important;
+  outline: none !important;
+}
+
+/* -------------------------------------------------------------
+   Cards, Panels, and Data Tables: Pure White with Crisp Border & Shadow
+   ------------------------------------------------------------- */
+.card,
+.card-minimal,
+.egsa-card,
+.panel {
+  background-color: #ffffff !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-header,
+.panel-header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+  font-weight: 600 !important;
+}
+
+.table-minimal,
+.table-responsive,
+.card .table {
+  background: #ffffff !important;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-minimal {
+  border: 1px solid #CBD5E1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08) !important;
+}
+
+.table th {
+  background-color: #F1F5F9 !important;
+  color: #1E293B !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-weight: 700 !important;
+  padding: 0.75rem 1rem !important;
+  border-bottom: 1px solid #CBD5E1 !important;
+}
+
+.table td {
+  padding: 0.75rem 1rem !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  vertical-align: middle !important;
+  color: #0F172A !important;
+  background-color: #ffffff !important;
+}
+
+.table tr:last-child td {
+  border-bottom: none !important;
+}
+
+.table tr:hover td {
+  background-color: #F8FAFC !important;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "egsa-academy",
+  "version": "1.0.0",
+  "description": "Egyptian Space Agency (EGSA) Academy Platform - Unified Multi-Portal System",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "start:backend": "npm --prefix backend start",
+    "build": "npm --prefix frontend run build",
+    "seed": "npm --prefix backend run seed",
+    "seed:backend": "npm --prefix backend run seed",
+    "install:all": "npm --prefix frontend install && npm --prefix backend install"
+  },
+  "keywords": [
+    "egsa",
+    "space-agency",
+    "academy",
+    "portal"
+  ],
+  "author": "Egyptian Space Agency",
+  "license": "ISC"
+}

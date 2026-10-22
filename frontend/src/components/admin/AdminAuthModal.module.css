@@ -1,0 +1,373 @@
+/* =========================================================
+   EGSA Academy — Division Admin Authentication Modal
+   Clean Enterprise SaaS Edition
+   ========================================================= */
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1060;
+  padding: 1rem;
+}
+
+.modalDialog {
+  background: #FFFFFF;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08), 0 0 0 1px #E2E8F0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal Header Bar */
+.modalHeader {
+  position: relative;
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  background: #FFFFFF;
+}
+
+.headerTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.emblemWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.agencyEmblem {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  background: #FFFFFF;
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid #E2E8F0;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.agencyLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748B;
+  margin-bottom: 0.1rem;
+}
+
+.modalTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-size: 1.15rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.closeButton:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+}
+
+/* Division Scope Banner */
+.scopeBanner {
+  margin-top: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+}
+
+.scopeBannerUniversity {
+  background: #F0FDFA;
+  border-color: #CCFBF1;
+  color: #0E7490;
+}
+
+.scopeBannerPreUniversity {
+  background: #F0F9FF;
+  border-color: #E0F2FE;
+  color: #0369A1;
+}
+
+.scopeBannerSuperAdmin {
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+  color: #0F172A;
+}
+
+.scopeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.badgeUniversity {
+  background: #ECFDF5;
+  color: #047857;
+  border: 1px solid #A7F3D0;
+}
+
+.badgePreUniversity {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+
+.badgeSuperAdmin {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #0F172A;
+}
+
+/* Modal Body */
+.modalBody {
+  padding: 1.25rem;
+}
+
+/* Inline Alert Box */
+.inlineAlert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: #B91C1C;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.alertIcon {
+  font-size: 0.95rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+/* Demo Quick Fill Toolbar */
+.quickFillSection {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.quickFillHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+}
+
+.quickFillLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.quickFillBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #0F172A;
+  cursor: pointer;
+  transition: all 120ms ease;
+  text-align: left;
+}
+
+.quickFillBtn:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+.quickFillRole {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  background: #F1F5F9;
+  color: #475569;
+}
+
+/* Form Controls */
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 0.85rem;
+  color: #94A3B8;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.55rem 2.4rem 0.55rem 2.25rem;
+  font-size: 0.88rem;
+  color: #0F172A;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+  font-family: inherit;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #0E7490;
+  box-shadow: 0 0 0 2px rgba(14, 116, 144, 0.15);
+}
+
+.togglePassBtn {
+  position: absolute;
+  right: 0.45rem;
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-size: 0.85rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 120ms ease;
+}
+
+.togglePassBtn:hover {
+  color: #334155;
+}
+
+.securityNotice {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  color: #64748B;
+  margin-bottom: 1rem;
+}
+
+/* Modal Actions */
+.modalActions {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.cancelBtn {
+  flex: 1;
+  padding: 0.6rem 0.85rem;
+  background: #FFFFFF;
+  color: #475569;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.cancelBtn:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+  border-color: #94A3B8;
+}
+
+.submitBtn {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1rem;
+  color: #FFFFFF;
+  background-color: #3A6985;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 140ms ease;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #2E546B;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
